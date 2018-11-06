@@ -1,0 +1,11 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+  \node[label=above:a label] (name) at (0,0) {The text of a node};
+  \node[draw,circle,below=1cm] (second) at (name.south) {another node with a shape};
+  \draw (name) -- (second);
+\end{tikzpicture}
+\end{document}
